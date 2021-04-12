@@ -14,15 +14,15 @@
  */
 function createPhotoMap () {
   // URL of a Google Sheets spreadsheet output as CSV
-  var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSuESp280YE8_PokNYJSK_V3zxGh7ZJlDqMNeliCoz1kt6q2ii7lRovZ-yMlEFY2n6rhUu3vOpnvFGx/pub?gid=0&single=true&output=csv';
+  var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRIIVw-fHEe2o8OFENE2rjq48C_yuiOYotqtOJm138BN0W4xvtmf4nmpZCWtybyqybVw0fp5DyInfbd/pub?gid=0&single=true&output=csv';
   
   // create map object with center lat/lon and zoom level
   var map = L.map('map').setView([30.44, -91.187], 13);
   
   // create basemap object. See examples at https://leaflet-extras.github.io/leaflet-providers/preview/
-  var basemap = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
-  	maxZoom: 16,
-  	attribution: 'USGS'
+ var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+       });
   }).addTo(map);
   
   // use Papa Parse (papaparse.com) to get the Google Sheets CSV
