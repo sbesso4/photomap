@@ -14,7 +14,7 @@
  */
 function createPhotoMap () {
   // URL of a Google Sheets spreadsheet output as CSV
-  var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRIIVw-fHEe2o8OFENE2rjq48C_yuiOYotqtOJm138BN0W4xvtmf4nmpZCWtybyqybVw0fp5DyInfbd/pubhtml?gid=0&single=true';
+  var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRIIVw-fHEe2o8OFENE2rjq48C_yuiOYotqtOJm138BN0W4xvtmf4nmpZCWtybyqybVw0fp5DyInfbd/pub?gid=0&single=true&output=csv';
   
   // create map object with center lat/lon and zoom level
   var map = L.map('map').setView([30.44, -91.187], 13);
